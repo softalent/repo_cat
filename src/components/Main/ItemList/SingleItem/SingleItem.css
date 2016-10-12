@@ -1,0 +1,96 @@
+.root {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.root:hover > .button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+}
+
+.title > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.fullName {
+  composes: gray from '../../../../styles/colors.css';
+  font-weight: normal;
+  color: gray;
+  font-size: 0.8rem;
+  padding-left: 0.3rem;
+}
+
+.content {
+  padding: 0.5rem 1.5rem 0.5rem 0;
+}
+
+.score {
+  color: rgb(255, 102, 0);
+  font-size: 0.85rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+.info {
+  font-size: 0.7em;
+  margin: 0;
+}
+
+.info > * {
+  padding: 0 0.2em;
+  color: inherit;
+}
+
+.info > *:first-child {
+  padding-left: 0;
+}
+
+.button {
+  transition: all 0.3s ease;
+  display: none;
+  user-select: none;
+  cursor: default;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 0.875rem;
+  min-width: 3rem;
+  right: 3%;
+  font-size: 0.625rem;
+  color: rgb(254, 251, 246); /* same as README bg */
+  padding: 2px 4px;
+  background-color: rgba(125, 124, 121, 0.5); /* gray from colors.css + transparency */
+  border-radius: 4px 4px 4px 4px;
+}
+
+.arrowCommon {
+  transition: transform 0.4s ease-out;
+  width: 0;
+  height: 0;
+  border-left: 0.35rem solid transparent;
+  border-right: 0.35rem solid transparent;
+  border-top: 0.35rem solid rgb(254, 251, 246);
+  border-bottom: none;
+  margin-top: 1px; /* baseline alignment */
+}
+
+.downArrow {
+  transform: scaleY(1);
+}
+
+.upArrow {
+  transform: scaleY(-1);
+}

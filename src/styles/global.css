@@ -1,0 +1,11 @@
+body {
+  background-color: rgb(248, 245, 240); /* should be the same as the one specified in ./colors.css */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
